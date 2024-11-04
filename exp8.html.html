@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+transition: background-color 0.5s;
+}
+.section {
+padding: 20px;
+margin: 10px;
+border: 1px solid black;
+}
+</style>
+</head>
+<body onmouseover="changeBgColor()">
+<div class="section" tabindex="0" 
+onfocus="changeFocus(1)" style="outline: none;">
+<h1>Welcome to My Website</h1>
+<p>This is the home section of my 
+website.</p> </div>
+<div class="section" tabindex="0" 
+onfocus="changeFocus(2)" style="outline: none;">
+<h2>About Us</h2>
+<p>Learn more about our mission and 
+values.</p> </div>
+<div class="section" tabindex="0" 
+onfocus="changeFocus(3)" style="outline: none;">
+<h2>Contact</h2>
+<p>Get in touch with us through this 
+section.</p> </div>
+<script>
+function changeBgColor() {
+document.body.style.backgroundColor = "lightblue";
+}
+function changeFocus(sectionNumber) {
+let sections = document.querySelectorAll('.section'); 
+sections.forEach(section => {
+section.style.backgroundColor = '';
+});
+if (sectionNumber === 1) {
+event.target.style.backgroundColor = "lightgreen";
+} else if (sectionNumber === 2) { 
+event.target.style.backgroundColor = "yellow";
+} else if (sectionNumber === 3) { 
+event.target.style.backgroundColor = "pink";
+}
+}
+</script>
+</body>
+</html>

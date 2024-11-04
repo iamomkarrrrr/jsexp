@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<script src="script.js"></script>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin-top: 50px;
+}
+.timer-box {
+display: inline-block;
+border: 1px solid #ccc;
+padding: 20px;
+margin: 20px;
+background-color: #f9f9f9;
+}
+.timer-display {
+font-size: 2em;
+margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<h1>Countdown Timer</h1>
+<div class="timer-box">
+<label for="expiryDate">Expiry Date (YYYY-MM-DD):</label> 
+<input type="date" id="expiryDate" required><br><br> <label 
+for="expiryTime">Expiry Time (HH:MM:SS):</label> <input 
+type="time" id="expiryTime" step="1" required><br><br> 
+<button onclick="startTimer()">Start Countdown</button>
+</div>
+<div class="timer-box">
+<div id="currentTime"></div>
+<div id="expiryTimeDisplay"></div>
+<div class="timer-display" 
+id="countdown"></div> <div id="message"></div>
+</div>+
+</body>
+</html>
